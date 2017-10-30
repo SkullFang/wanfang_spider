@@ -19,4 +19,8 @@ for i in range(1,1301):
     listUrls=soup.findAll("a",href=re.compile(r'(.+)(Detail)(.+)'));
     for url in listUrls:
         if not re.search("\.(jpg|RNG|JPG|png)", url["href"]):
-            print(url["href"])
+            print("http://industry.wanfangdata.com.cn"+url["href"])
+
+
+
+
