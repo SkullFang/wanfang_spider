@@ -17,19 +17,22 @@ lenth=0
 for i in range(1,1301):
     # print(i)
     url="http://industry.wanfangdata.com.cn/qd/Column/Patent?p="+str(i)+"&n=10&q=%22%E6%99%BA%E8%83%BD%E7%BB%88%E7%AB%AF%22&o=sortby%20F_ApplicationDate/weight=3%20relevance/weight=1"
-
-    resp=request.urlopen(url)
-    # print(resp.getcode())
-    soup=BeautifulSoup(resp.read().decode("utf-8"),"html.parser")  #指定解析器
-    listUrls=soup.findAll("a",href=re.compile(r'(.+)(Detail)(.+)'));
-    for url in listUrls:
-        if not re.search("\.(jpg|RNG|JPG|png)", url["href"]):
-            titlei=url.get_text()
-            stri="http://industry.wanfangdata.com.cn"+url["href"]
-            print(titlei+" "+stri)
-            listTitle.append(titlei)
-            listStr.append(stri)
-            lenth=lenth+1
+    try:
+        resp=request.urlopen(url,timeout=10)
+        # print(resp.getcode())
+        soup=BeautifulSoup(resp.read().decode("utf-8"),"html.parser")  #指定解析器
+        listUrls=soup.findAll("a",href=re.compile(r'(.+)(Detail)(.+)'));
+        for url in listUrls:
+            if not re.search("\.(jpg|RNG|JPG|png)", url["href"]):
+                titlei=url.get_text()
+                stri="http://industry.wanfangdata.com.cn"+url["href"]
+                print(titlei+" "+stri)
+                listTitle.append(titlei)
+                listStr.append(stri)
+                lenth=lenth+1
+    except:
+        i = i + 1
+        continue
 
 
 # 写入操作
