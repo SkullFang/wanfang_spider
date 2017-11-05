@@ -109,6 +109,8 @@ def fun(fname,outfname):
 
 # fun("../resource/xiTongUrl.xls","../out/xiTong.xls")
 # fun("../resource/xinXingXianShiUrl.xls","../out/xinXingXianShiUrl.xls")
-fun("../resource/zhinengUrl.xls","../out/zhineng.xls")
+# fun("../resource/zhinengUrl.xls","../out/zhineng.xls")
+# fun("../resource/jiChengUrl.xls","../out/jiCheng.xls")
+fun("../resource/xinPianUrl.xls","../out/xinPian.xls")
 
 
