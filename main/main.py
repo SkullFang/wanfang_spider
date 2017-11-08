@@ -10,6 +10,7 @@ from xlwt import *
 from urllib import request
 from urllib.error import HTTPError,URLError
 from bs4 import  BeautifulSoup
+import socket
 def fun(fname,outfname):
     bk=xlrd.open_workbook(fname)
     try:
@@ -42,7 +43,7 @@ def fun(fname,outfname):
             re1.add_header('user-agent',
                            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36')
             re = request.urlopen(re1,timeout=200)
-        except (HTTPError, URLError ) as e:  # 遇到相应错误就跳过
+        except (HTTPError, URLError ,ConnectionResetError,socket.timeout) as e:  # 遇到相应错误就跳过
             continue
         try:
             soup = BeautifulSoup(re.read().decode("utf-8"), "html.parser")  # 指定解析器
@@ -97,7 +98,7 @@ def fun(fname,outfname):
                 if (v == '国别省市代码：'):
                     ws.write(index, 13, k)
 
-        except AttributeError as e:
+        except (AttributeError,HTTPError, URLError ,ConnectionResetError,socket.timeout) as e:
             continue
         except UnicodeDecodeError as e:
             continue
@@ -111,6 +112,13 @@ def fun(fname,outfname):
 # fun("../resource/xinXingXianShiUrl.xls","../out/xinXingXianShiUrl.xls")
 # fun("../resource/zhinengUrl.xls","../out/zhineng.xls")
 # fun("../resource/jiChengUrl.xls","../out/jiCheng.xls")
-fun("../resource/xinPianUrl.xls","../out/xinPian.xls")
-
+# fun("../resource/xinPianUrl.xls","../out/xinPian.xls")
+# fun("../resource/dianZiXinXi3.xls","../out/dianZiXinXi3.xls")
+# fun("../resource/dianZiXinXi4.xls","../out/dianZiXinXi4.xls")
+# fun("../resource/dianZiXinXi2.xls","../out/dianZiXinXi2.xls")
+fun("../resource/dianZiXinXi5.xls","../out/dianZiXinXi5.xls")
+fun("../resource/dianZiXinXi6.xls","../out/dianZiXinXi6.xls")
+fun("../resource/dianZiXinXi7.xls","../out/dianZiXinXi7.xls")
+fun("../resource/dianZiXinXi8.xls","../out/dianZiXinXi8.xls")
+fun("../resource/dianZiXinXi9.xls","../out/dianZiXinXi9.xls")
 
