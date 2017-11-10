@@ -116,9 +116,16 @@ def fun(fname,outfname):
 # fun("../resource/dianZiXinXi3.xls","../out/dianZiXinXi3.xls")
 # fun("../resource/dianZiXinXi4.xls","../out/dianZiXinXi4.xls")
 # fun("../resource/dianZiXinXi2.xls","../out/dianZiXinXi2.xls")
-fun("../resource/dianZiXinXi5.xls","../out/dianZiXinXi5.xls")
-fun("../resource/dianZiXinXi6.xls","../out/dianZiXinXi6.xls")
-fun("../resource/dianZiXinXi7.xls","../out/dianZiXinXi7.xls")
-fun("../resource/dianZiXinXi8.xls","../out/dianZiXinXi8.xls")
-fun("../resource/dianZiXinXi9.xls","../out/dianZiXinXi9.xls")
+# fun("../resource/dianZiXinXi5.xls","../out/dianZiXinXi5.xls")
+# fun("../resource/dianZiXinXi6.xls","../out/dianZiXinXi6.xls")
+# fun("../resource/dianZiXinXi7.xls","../out/dianZiXinXi7.xls")
+# fun("../resource/dianZiXinXi8.xls","../out/dianZiXinXi8.xls")
+# fun("../resource/dianZiXinXi9.xls","../out/dianZiXinXi9.xls")
+
+# fun("../resource/dianZiXinXi10.xls","../out/dianZiXinXi10.xls")
+fun("../resource/dianZiXinXi11.xls","../out/dianZiXinXi11.xls")
+# fun("../resource/dianZiXinXi12.xls","../out/dianZiXinXi12.xls")
+# fun("../resource/dianZiXinXi13.xls","../out/dianZiXinXi13.xls")
+
+
 

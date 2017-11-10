@@ -5,5 +5,5 @@
 # @File    : dianZiXinXi6.py
 # @Software: PyCharm
 import dianZiXinXi3
-dianZiXinXi3.last(9001,10001,"../resource/dianZiXinXi10.xls")
+# dianZiXinXi3.last(9001,10001,"../resource/dianZiXinXi10.xls")
 dianZiXinXi3.last(10001,11001,"../resource/dianZiXinXi11.xls")
